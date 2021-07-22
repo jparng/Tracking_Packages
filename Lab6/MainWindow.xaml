@@ -1,0 +1,58 @@
+﻿<Window x:Class="Lab6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab6"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="arriveBox" HorizontalAlignment="Left" Margin="220,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" IsEnabled="False"/>
+        <TextBlock HorizontalAlignment="Left" Margin="148,78,0,0" Text="Arrived at:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <GroupBox Header="Package Information" Margin="21,115,238,89"/>
+        <GroupBox Header="Packages by State" Margin="608,78,10,34">
+            <ListBox x:Name="stateList" Margin="0,0,-2,0" Height="170"/>
+        </GroupBox>
+        <TextBox x:Name="packageBox" HorizontalAlignment="Left" Margin="148,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="294" IsEnabled="False"/>
+        <TextBlock HorizontalAlignment="Left" Margin="58,146,0,0" Text="Package ID:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="58,0,0,0" Text="Address: " TextWrapping="Wrap" VerticalAlignment="Center"/>
+        <TextBox x:Name="addressBox" HorizontalAlignment="Left" Margin="148,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="298" Height="16" IsEnabled="False"/>
+        <TextBlock x:Name="cityName" HorizontalAlignment="Left" Margin="58,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="18" Width="26" Text="City:"/>
+        <TextBox x:Name="cityBox" HorizontalAlignment="Left" Margin="106,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" Height="17" IsEnabled="False"/>
+        <TextBlock x:Name="stateName" HorizontalAlignment="Left" Margin="220,283,0,0" Text="State: " TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.233,0.566"/>
+        <ComboBox x:Name="stateBox" HorizontalAlignment="Left" Margin="262,279,0,0" VerticalAlignment="Top" Width="66" IsReadOnly="True" Height="21" IsEnabled="False">
+            <ComboBoxItem Content="AL"/>
+            <ComboBoxItem Content="FL"/>
+            <ComboBoxItem Content="GA"/>
+            <ComboBoxItem Content="KY"/>
+            <ComboBoxItem Content="MS"/>
+            <ComboBoxItem Content="NC"/>
+            <ComboBoxItem Content="SC"/>
+            <ComboBoxItem Content="TN"/>
+            <ComboBoxItem Content="VA"/>
+            <ComboBoxItem Content="WV"/>
+
+        </ComboBox>
+        <TextBlock x:Name="zipName" HorizontalAlignment="Left" Margin="361,282,0,0" Text="Zip code:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="zipBox" HorizontalAlignment="Left" Margin="427,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.517,0.559" IsEnabled="False" Height="19"/>
+        <Button x:Name="backBtn" Content="&lt;Back" HorizontalAlignment="Left" Margin="43,380,0,0" VerticalAlignment="Top" IsEnabled="False" Click="goBack"/>
+        <Button x:Name="nextBtn" Content="Next &gt;" HorizontalAlignment="Left" Margin="507,380,0,0" VerticalAlignment="Top" IsEnabled="False" Click="goNext"/>
+        <Button x:Name="scanBtn" Content="Scan New" HorizontalAlignment="Left" Margin="135,380,0,0" VerticalAlignment="Top" Click="scanClick"/>
+        <Button x:Name="addBtn" Content="Add" HorizontalAlignment="Left" Margin="236,380,0,0" VerticalAlignment="Top" IsEnabled="False" Click="addClick"/>
+        <Button x:Name="removeBtn" Content="Remove" HorizontalAlignment="Left" Margin="331,380,0,0" VerticalAlignment="Top" IsEnabled="False" Click="deleteBtn"/>
+        <Button x:Name="editBtn" Content="Edit" HorizontalAlignment="Left" Margin="427,380,0,0" VerticalAlignment="Top" IsEnabled="False" Click="editItems"/>
+        <ComboBox x:Name="packageStatebox" HorizontalAlignment="Left" Width="136" Margin="631,115,0,265" IsReadOnly="True" IsEnabled="False" SelectionChanged="stateSelect" DropDownClosed="stateSelected">
+            <ComboBoxItem Content="AL"/>
+            <ComboBoxItem Content="FL"/>
+            <ComboBoxItem Content="GA"/>
+            <ComboBoxItem Content="KY"/>
+            <ComboBoxItem Content="MS"/>
+            <ComboBoxItem Content="NC"/>
+            <ComboBoxItem Content="SC"/>
+            <ComboBoxItem Content="TN"/>
+            <ComboBoxItem Content="VA"/>
+            <ComboBoxItem Content="WV"/>
+        </ComboBox>
+
+    </Grid>
+</Window>
